@@ -1,7 +1,7 @@
 import React from 'react';
 import './Office.css';
 import Desk from '../Desk/Desk';
-import CoffeeArea from '../CoffeeArea/CoffeeArea';
+import MeetingArea from '../CoffeeArea/MeetingArea';
 
 
 function Office(){
@@ -15,7 +15,7 @@ function Office(){
         <Desk/>
         <Desk/>
       </div>
-      <CoffeeArea/>
+      <MeetingArea/>
     </div>
   )
 }
