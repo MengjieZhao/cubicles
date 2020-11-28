@@ -1,13 +1,13 @@
 import React from 'react';
 import './Desk.css';
 import Employee from "../Employee/Employee";
-
+import desktop from "../../statics/desktop.svg";
 
 function Desk({id}){
   return(
     <div className="desk" >
-      <h1>My workspace</h1>
-        <Employee id={id}/>
+      <img className="desk_img" src={desktop}/>
+      <Employee id={id}/>
     </div>
 
   )
