@@ -1,18 +1,21 @@
 import React from 'react';
-import './Desk.css';
+import './Office.css';
+import Desk from '../Desk/Desk';
 
 
 function Office(){
   return(
-    <div className="desk" >
-      <h1>Shopping List for me</h1>
-      <ul>
-        <li>Instagram</li>
-        <li>WhatsApp</li>
-        <li>Oculus</li>
-      </ul>
+    <div className="office" >
+      <div className="two_desk">
+        <Desk/>
+        <Desk/>
+      </div>
+      <div className="two_desk">
+        <Desk/>
+        <Desk/>
+      </div>
     </div>
   )
 }
 
-export default Desk;
+export default Office;

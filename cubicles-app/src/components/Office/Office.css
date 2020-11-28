@@ -1,4 +1,12 @@
 
 .office {
-    flex: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.two_desk {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
