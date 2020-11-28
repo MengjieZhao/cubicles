@@ -1,8 +1,10 @@
 import React from 'react';
+import './desk.css';
+
 
 function Desk(){
   return(
-    <div className="shopping-list">
+    <div className="desk" >
       <h1>Shopping List for me</h1>
       <ul>
         <li>Instagram</li>
