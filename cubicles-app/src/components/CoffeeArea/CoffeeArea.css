@@ -1,9 +1,11 @@
 
 .coffee {
-    background: chocolate;
-    height: 400px;
+    background: aliceblue;
+    border-radius: 20px;
+    height: 450px;
     width: 300px;
-    text-align: start;
+    color: black;
+    text-align: center;
     font-size: 16px;
-    margin: 20px;
+    margin-left: 200px
 }
