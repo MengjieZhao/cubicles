@@ -4,7 +4,7 @@ import './Employee.css';
 
 function Employee(){
     return(
-        <div className="employee" >
+        <div className="employee">
             <p>Employee ID</p>
         </div>
     )

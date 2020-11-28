@@ -17,7 +17,6 @@ function Office(){
         <Desk/>
       </div>
       <MeetingArea/>
-      <Employee/>
     </div>
   )
 }
