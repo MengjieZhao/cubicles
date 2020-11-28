@@ -2,6 +2,7 @@ import React from 'react';
 import './Office.css';
 import Desk from '../Desk/Desk';
 import MeetingArea from '../CoffeeArea/MeetingArea';
+import Employee from '../Employee/Employee';
 
 
 function Office(){
@@ -16,6 +17,7 @@ function Office(){
         <Desk/>
       </div>
       <MeetingArea/>
+      <Employee/>
     </div>
   )
 }
