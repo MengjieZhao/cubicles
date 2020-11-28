@@ -1,5 +1,5 @@
 import React from 'react';
-import './desk.css';
+import './Desk.css';
 
 
 function Desk(){
