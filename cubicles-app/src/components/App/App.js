@@ -1,4 +1,3 @@
-import logo from '../../statics/logo.svg';
 import './App.css';
 import Office from '../Office/Office';
 
