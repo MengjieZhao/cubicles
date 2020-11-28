@@ -3,7 +3,6 @@ import './Office.css';
 import Desk from '../Desk/Desk';
 import MeetingArea from '../MeetingArea/MeetingArea';
 import CoffeeArea from '../CoffeeArea/CoffeeArea';
-import Employee from '../Employee/Employee';
 
 
 function Office(){
