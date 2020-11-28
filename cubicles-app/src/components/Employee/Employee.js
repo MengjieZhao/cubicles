@@ -2,10 +2,10 @@ import React from 'react';
 import './Employee.css';
 
 
-function Employee(){
+function Employee({ id }){
     return(
         <div className="employee">
-            <p>Employee ID</p>
+            <p className="text">{id}</p>
         </div>
     )
 }

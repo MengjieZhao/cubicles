@@ -10,12 +10,12 @@ function Office(){
     <div className="office" >
       <CoffeeArea/>
       <div className="two_desk">
-        <Desk/>
-        <Desk/>
+        <Desk id="A"/>
+        <Desk id="B"/>
       </div>
       <div className="two_desk">
-        <Desk/>
-        <Desk/>
+        <Desk id="C"/>
+        <Desk id="D"/>
       </div>
       <MeetingArea/>
     </div>

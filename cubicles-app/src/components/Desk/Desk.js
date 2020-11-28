@@ -3,11 +3,11 @@ import './Desk.css';
 import Employee from "../Employee/Employee";
 
 
-function Desk(){
+function Desk({id}){
   return(
     <div className="desk" >
       <h1>My workspace</h1>
-        <Employee/>
+        <Employee id={id}/>
     </div>
 
   )
