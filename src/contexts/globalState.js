@@ -6,13 +6,14 @@ import PropTypes from 'prop-types';
 const initialState = {
   users: [],
   usersInMeeting: [{ id: '1', name: 'Monmon' }, { id: '2', name: 'Jenni' }],
-  usersInCoffeeBreak: [{ id: '3', name: 'Ninah' }, { id: '4', name: 'Raffi' }],
+  usersInBreak: [{ id: '3', name: 'Ninah' }, { id: '4', name: 'Raffi' }],
 };
 const GlobalStateContext = createContext(initialState);
 const { Provider } = GlobalStateContext;
 
 export const ACTIONS = {
   ADD_USERS: 'ADD_USERS',
+  UPDATE_USERS_ODER: 'UPDATE_USERS_ODER',
 };
 
 export const GlobalStateProvider = ({ children }) => {
@@ -23,6 +24,20 @@ export const GlobalStateProvider = ({ children }) => {
           ...state,
           users: [state.users, ...action.user],
         };
+      case ACTIONS.UPDATE_USERS_ODER:
+        if (action.droppableId === 'meeting') {
+          return {
+            ...state,
+            usersInMeeting: action.newUsers,
+          };
+        }
+        if (action.droppableId === 'break') {
+          return {
+            ...state,
+            usersInBreak: action.newUsers,
+          };
+        }
+        return state;
       default:
         throw new Error('globalState: unknown action type');
     }

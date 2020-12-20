@@ -7,7 +7,6 @@ import { useGlobalState } from '../../contexts/globalState';
 
 function MeetingArea() {
   const [{ usersInMeeting }] = useGlobalState();
-  console.log('usersInMeeting', usersInMeeting);
 
   const UserList = React.memo(() => usersInMeeting.map((user, index) => (
     <User user={user} index={index} key={user.id} />

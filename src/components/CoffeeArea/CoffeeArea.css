@@ -9,11 +9,11 @@
     height: 45vh;
     width: 20vw;
     text-align: center;
-    font-size: calc(8px + 1vmin);
+    font-size: calc(6px + 1vmin);
     margin-inline: 20px;
 }
 
 .img {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
 }

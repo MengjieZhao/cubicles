@@ -6,10 +6,9 @@ import { useGlobalState } from '../../contexts/globalState';
 import User from '../User/User';
 
 function CoffeeArea() {
-  const [{ usersInCoffeeBreak }] = useGlobalState();
-  console.log('usersInCoffeeBreak', usersInCoffeeBreak);
+  const [{ usersInBreak }] = useGlobalState();
 
-  const UserList = React.memo(() => usersInCoffeeBreak.map((user, index) => (
+  const UserList = React.memo(() => usersInBreak.map((user, index) => (
     <User user={user} index={index} key={user.id} />
   )));
 
@@ -17,10 +16,10 @@ function CoffeeArea() {
     <div className="coffee">
       <img className="img" src={coffee} alt="coffee" />
       <h1 style={{ color: '#2E2E2E' }}>Coffee Area</h1>
-      <Droppable droppableId="coffee">
+      <Droppable droppableId="break">
         {(provided) => (
           <div ref={provided.innerRef} {...provided.droppableProps}>
-            <UserList users={usersInCoffeeBreak} />
+            <UserList users={usersInBreak} />
             {provided.placeholder}
           </div>
         )}
