@@ -10,7 +10,7 @@
     height: 70vh;
     width: 20vw;
     font-size: calc(8px + 1vmin);
-    margin-inline: 20px;
+    margin-right: 1vw;
 }
 
 .meeting_img {

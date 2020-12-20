@@ -2,16 +2,7 @@
 .office {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     height: 70vh;
     margin-inline: 20px;
 }
-
-.desks {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
 

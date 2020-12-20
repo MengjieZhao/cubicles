@@ -1,19 +1,14 @@
 import React from 'react';
 import './Office.css';
-import Desk from '../Desk/Desk';
 import MeetingArea from '../MeetingArea/MeetingArea';
 import CoffeeArea from '../CoffeeArea/CoffeeArea';
+import WorkingArea from "../WorkingArea/WorkingArea";
 
 function Office(){
   return(
       <div className="office" >
         <CoffeeArea/>
-        <div className="desks">
-          <Desk id="MJ"/>
-          <Desk id="Jenni"/>
-          <Desk id="Raffi"/>
-          <Desk id="Max"/>
-        </div>
+        <WorkingArea/>
         <MeetingArea/>
       </div>
   )

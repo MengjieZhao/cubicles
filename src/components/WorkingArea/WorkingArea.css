@@ -1,0 +1,9 @@
+.desks {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: row;
+    height: 70vh;
+    width: 35vw;
+    margin-inline: 0px;
+}
