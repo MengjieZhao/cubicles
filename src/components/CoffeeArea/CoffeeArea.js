@@ -6,7 +6,7 @@ function CoffeeArea() {
   return(
     <div className="coffee" >
       <img className="img" src={coffee}/>
-      <h1>Coffee Area</h1>
+      <h1 style={{ color: '#2E2E2E' }}>Coffee Area</h1>
     </div>
   )
 }

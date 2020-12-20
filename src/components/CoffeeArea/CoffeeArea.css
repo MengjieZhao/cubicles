@@ -1,18 +1,19 @@
 
 .coffee {
-    background: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #B08E75;
     border-radius: 20px;
-    height: 200px;
-    width: 250px;
-    color: black;
+    height: 45vh;
+    width: 20vw;
     text-align: center;
-    font-size: 16px;
-    margin-right: 100px;
-    margin-top: -20px;
+    font-size: calc(8px + 1vmin);
+    margin-inline: 20px;
 }
 
 .img {
-    margin: 20px;
     height: 50px;
     width: 50px;
 }

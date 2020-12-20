@@ -4,14 +4,12 @@
   flex-direction: column;
   align-content: center;
   align-items: center;
-  background: burlywood;
+  background: #EDD6B6;
   border-radius: 20px;
-  height: 150px;
-  width: 250px;
-  text-align: center;
+  height: 20vh;
+  width: 15vw;
   color: black;
-  margin-bottom: 20px;
-  margin-left: 20px;
+  margin-inline: 10px;
 }
 
 .desk_img {

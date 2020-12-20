@@ -1,0 +1,18 @@
+.Menu {
+    top: 0;
+    left: 0;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #6A829A;
+    height: 100vh;
+    width: 80px;
+}
+
+.menu_img{
+    height: 40px;
+    width: 40px;
+    padding: 20px;
+    cursor: pointer;
+}

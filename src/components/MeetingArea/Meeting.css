@@ -1,21 +1,19 @@
 
 .meeting {
     display: flex;
-    flex: 1;
+    text-align: center;
     flex-direction: column;
-    align-content: center;
+    justify-content: center;
     align-items: center;
-    background: aliceblue;
+    background: #6A829A;
     border-radius: 20px;
-    height: 500px;
-    width: 250px;
-    color: black;
-    font-size: 16px;
-    margin-left: 100px
+    height: 70vh;
+    width: 20vw;
+    font-size: calc(8px + 1vmin);
+    margin-inline: 20px;
 }
 
 .meeting_img {
-    margin-top: 180px;
     height: 50px;
     width: 50px;
 }
