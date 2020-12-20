@@ -3,11 +3,11 @@ import menu from '../../statics/menu.svg';
 import './Menu.css';
 
 function Menu() {
-  return(
+  return (
     <div className="Menu">
-      <img className="menu_img" src={menu} alt='menu'/>
+      <img className="menu_img" src={menu} alt="menu" />
     </div>
-  )
+  );
 }
 
 export default Menu;
