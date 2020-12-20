@@ -1,12 +1,13 @@
 
 .desk {
   display: flex;
+  flex-direction: column;
   align-content: center;
   align-items: center;
   justify-content: center;
   background: #9BD1E5;
   border-radius: 20px;
-  height: 80px;
+  height: 100px;
   width: 100px;
   color: black;
   margin-inline: 10px;

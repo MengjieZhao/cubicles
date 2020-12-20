@@ -4,9 +4,9 @@ import React, {
 import PropTypes from 'prop-types';
 
 const initialState = {
-  users: [],
+  usersAtWork: { 1: [{ id: '0', name: 'Raffi' }] },
   usersInMeeting: [{ id: '1', name: 'Monmon' }, { id: '2', name: 'Jenni' }],
-  usersInBreak: [{ id: '3', name: 'Ninah' }, { id: '4', name: 'Raffi' }],
+  usersInBreak: [{ id: '3', name: 'Ninah' }, { id: '4', name: 'Felix' }, { id: '5', name: 'Sophie' }],
 };
 const GlobalStateContext = createContext(initialState);
 const { Provider } = GlobalStateContext;

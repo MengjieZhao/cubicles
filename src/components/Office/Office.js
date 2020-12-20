@@ -8,7 +8,6 @@ import WorkingArea from '../WorkingArea/WorkingArea';
 import { ACTIONS, useGlobalState } from '../../contexts/globalState';
 
 function Office() {
-  // eslint-disable-next-line no-unused-vars
   const [{ usersInMeeting, usersInBreak }, dispatch] = useGlobalState();
 
   const getList = (id) => {
