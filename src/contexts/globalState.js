@@ -37,6 +37,13 @@ export const GlobalStateProvider = ({ children }) => {
             usersInBreak: action.newUsers,
           };
         }
+        if (action.droppableId.includes('work')) {
+          const index = action.droppableId.split('_')[1];
+          return {
+            ...state,
+            usersAtWork: { ...state.usersAtWork, [index]: action.newUsers },
+          };
+        }
         return state;
       default:
         throw new Error('globalState: unknown action type');

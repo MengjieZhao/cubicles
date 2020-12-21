@@ -8,11 +8,15 @@ import WorkingArea from '../WorkingArea/WorkingArea';
 import { ACTIONS, useGlobalState } from '../../contexts/globalState';
 
 function Office() {
-  const [{ usersInMeeting, usersInBreak }, dispatch] = useGlobalState();
+  const [{ usersAtWork, usersInMeeting, usersInBreak }, dispatch] = useGlobalState();
 
   const getList = (id) => {
     if (id === 'meeting') { return usersInMeeting; }
     if (id === 'break') { return usersInBreak; }
+    if (id.includes('work')) {
+      const index = id.split('_')[1];
+      return usersAtWork[index] || [];
+    }
     return undefined;
   };
 
@@ -23,6 +27,7 @@ function Office() {
     return newOrder;
   };
 
+  // eslint-disable-next-line no-unused-vars
   const move = (source, destination, droppableSource, droppableDestination) => {
     const sourceClone = Array.from(source);
     const destClone = Array.from(destination);
@@ -39,7 +44,6 @@ function Office() {
 
   const onDragEnd = (result) => {
     const { source, destination } = result;
-
     // dropped outside the list
     if (!destination) {
       return;
