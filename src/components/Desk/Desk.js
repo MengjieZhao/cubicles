@@ -8,9 +8,7 @@ import User from '../User/User';
 
 function Desk({ id }) {
   const [{ usersAtWork }] = useGlobalState();
-  // eslint-disable-next-line no-unused-vars
   const usersAtDesk = usersAtWork[id] || [];
-  console.log(id, usersAtDesk.length);
   const UserList = React.memo(() => usersAtDesk.map((user, index) => (
     <User user={user} index={index} key={user.id} />
   )));

@@ -1,14 +1,34 @@
-import React from 'react';
+import React, { useCallback, useState, useEffect } from 'react';
 import './Office.css';
 import { DragDropContext } from 'react-beautiful-dnd';
 import MeetingArea from '../MeetingArea/MeetingArea';
 import CoffeeArea from '../CoffeeArea/CoffeeArea';
 import WorkingArea from '../WorkingArea/WorkingArea';
-// eslint-disable-next-line no-unused-vars
 import { ACTIONS, useGlobalState } from '../../contexts/globalState';
+import { useApiService } from '../../contexts/apiService';
 
 function Office() {
   const [{ usersAtWork, usersInMeeting, usersInBreak }, dispatch] = useGlobalState();
+  // eslint-disable-next-line no-unused-vars
+  const [loading, setLoading] = useState(false);
+  const { getUsersInMeeting } = useApiService();
+
+  const loadUsers = useCallback(async () => {
+    setLoading(true);
+    try {
+      await getUsersInMeeting();
+    } catch (e) {
+      console.log(e);
+    } finally {
+      setLoading(false);
+    }
+  }, [getUsersInMeeting]);
+
+  useEffect(() => {
+    (async () => {
+      await loadUsers();
+    })();
+  }, [loadUsers]);
 
   const getList = (id) => {
     if (id === 'meeting') { return usersInMeeting; }
