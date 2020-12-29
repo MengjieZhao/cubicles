@@ -16,6 +16,7 @@ export const ApiServiceProvider = ({ children }) => {
     const response = await fetch(url, {
       method,
       headers,
+      mode: 'no-cors',
       body: body && JSON.stringify(body),
     });
     console.log('response', response);
