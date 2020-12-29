@@ -9,7 +9,8 @@ const UserItem = ({ name }) => (
 
 function User({ user, index }) {
   return (
-    <Draggable draggableId={user.id} index={index}>
+    // eslint-disable-next-line no-underscore-dangle
+    <Draggable draggableId={user._id} index={index}>
       {(provided) => (
         <div
           ref={provided.innerRef}
@@ -29,8 +30,10 @@ UserItem.propTypes = {
 
 User.propTypes = {
   user: PropTypes.shape({
+    _id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    id: PropTypes.string.isRequired,
+    status: PropTypes.string,
+    deskId: PropTypes.string,
   }).isRequired,
   index: PropTypes.string.isRequired,
 };

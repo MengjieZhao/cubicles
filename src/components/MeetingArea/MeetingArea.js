@@ -9,7 +9,8 @@ function MeetingArea() {
   const [{ usersInMeeting }] = useGlobalState();
 
   const UserList = React.memo(() => usersInMeeting.map((user, index) => (
-    <User user={user} index={index} key={user.id} />
+    // eslint-disable-next-line no-underscore-dangle
+    <User user={user} index={index} key={user._id} />
   )));
 
   return (

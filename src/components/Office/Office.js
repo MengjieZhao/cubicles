@@ -4,25 +4,27 @@ import { DragDropContext } from 'react-beautiful-dnd';
 import MeetingArea from '../MeetingArea/MeetingArea';
 import CoffeeArea from '../CoffeeArea/CoffeeArea';
 import WorkingArea from '../WorkingArea/WorkingArea';
+// eslint-disable-next-line no-unused-vars
 import { ACTIONS, useGlobalState } from '../../contexts/globalState';
 import { useApiService } from '../../contexts/apiService';
 
 function Office() {
+  // eslint-disable-next-line no-unused-vars
   const [{ usersAtWork, usersInMeeting, usersInBreak }, dispatch] = useGlobalState();
   // eslint-disable-next-line no-unused-vars
   const [loading, setLoading] = useState(false);
-  const { getUsersInMeeting } = useApiService();
+  const { getUsers } = useApiService();
 
   const loadUsers = useCallback(async () => {
     setLoading(true);
     try {
-      await getUsersInMeeting();
+      await getUsers();
     } catch (e) {
       console.log(e);
     } finally {
       setLoading(false);
     }
-  }, [getUsersInMeeting]);
+  }, [getUsers]);
 
   useEffect(() => {
     (async () => {
@@ -47,7 +49,6 @@ function Office() {
     return newOrder;
   };
 
-  // eslint-disable-next-line no-unused-vars
   const move = (source, destination, droppableSource, droppableDestination) => {
     const sourceClone = Array.from(source);
     const destClone = Array.from(destination);
@@ -70,16 +71,17 @@ function Office() {
     }
 
     if (source.droppableId === destination.droppableId) {
+      // eslint-disable-next-line no-unused-vars
       const newOrder = reorder(
         getList(source.droppableId),
         source.index,
         destination.index,
       );
-      dispatch({
-        type: ACTIONS.UPDATE_USERS_ODER,
-        droppableId: source.droppableId,
-        newUsers: newOrder,
-      });
+      // dispatch({
+      //   type: ACTIONS.UPDATE_USERS_ODER,
+      //   droppableId: source.droppableId,
+      //   newUsers: newOrder,
+      // });
     //
     } else {
       const afterMove = move(
@@ -88,12 +90,13 @@ function Office() {
         source,
         destination,
       );
+      // eslint-disable-next-line no-unused-vars
       Object.keys(afterMove).forEach((state) => {
-        dispatch({
-          type: ACTIONS.UPDATE_USERS_ODER,
-          droppableId: state,
-          newUsers: afterMove[state],
-        });
+        // dispatch({
+        //   type: ACTIONS.UPDATE_USERS_ODER,
+        //   droppableId: state,
+        //   newUsers: afterMove[state],
+        // });
       });
     }
   };

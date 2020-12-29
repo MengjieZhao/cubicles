@@ -8,9 +8,10 @@ import User from '../User/User';
 
 function Desk({ id }) {
   const [{ usersAtWork }] = useGlobalState();
-  const usersAtDesk = usersAtWork[id] || [];
+  const usersAtDesk = usersAtWork.filter((u) => u.deskId === id) || [];
   const UserList = React.memo(() => usersAtDesk.map((user, index) => (
-    <User user={user} index={index} key={user.id} />
+    // eslint-disable-next-line no-underscore-dangle
+    <User user={user} index={index} key={user._id} />
   )));
 
   return (
