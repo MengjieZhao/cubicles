@@ -17,7 +17,7 @@
     "eslint-plugin-jsx-a11y": "6.x",
     "eslint-plugin-react": "7.x",
     "eslint-plugin-react-hooks": "2.x",
-    "node-sass": "4.14.0",
+    "node-sass": "7.0.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-beautiful-dnd": "^13.0.0",
